@@ -1,0 +1,102 @@
+<web-app>
+
+	<welcome-file-list>
+	<welcome-file> /home.html </welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+	<param-name>driverName</param-name>
+	<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>url</param-name>
+	<param-value>jdbc:oracle:thin:@localhost:1521/XE</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>username</param-name>
+	<param-value>onlineexam</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>password</param-name>
+	<param-value>vtech</param-value>
+	</context-param>
+	
+	<servlet>
+	
+	<servlet-name> LoginApp </servlet-name>
+	<servlet-class> LoginApp </servlet-class>
+	<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name> LoginApp </servlet-name>
+	<url-pattern> /login </url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+	
+	<servlet-name> RegisterApp </servlet-name>
+	<servlet-class> RegisterApp </servlet-class>
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name> RegisterApp </servlet-name>
+	<url-pattern> /register </url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+	
+	<servlet-name> WelcomeApp </servlet-name>
+	<servlet-class> WelcomeApp </servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name> WelcomeApp </servlet-name>
+	<url-pattern> /welcome </url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	
+	<servlet-name> SessionApp </servlet-name>
+	<servlet-class> SessionApp </servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name> SessionApp </servlet-name>
+	<url-pattern> /sessionApp </url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+	
+	<servlet-name> QuestionsApp </servlet-name>
+	<servlet-class> QuestionsApp </servlet-class>
+	<load-on-startup>3</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name> QuestionsApp </servlet-name>
+	<url-pattern>/question</url-pattern>	
+	</servlet-mapping>
+
+
+	<servlet>
+	
+	<servlet-name> LoadQuestions </servlet-name>
+	<servlet-class> LoadQuestions </servlet-class>
+	<load-on-startup>4</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name> LoadQuestions </servlet-name>
+	<url-pattern>/answers.jsp</url-pattern>	
+	</servlet-mapping>
+
+
+	
+</web-app>
